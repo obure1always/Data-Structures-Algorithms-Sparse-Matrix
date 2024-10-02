@@ -95,7 +95,7 @@ class SparseMatrix {
 
     multiply(other) {
         if (this.numCols !== other.numRows) {
-            throw new Error("Number of columns in the first matrix must equal the number of rows in the second matrix");
+            console.log("Number of columns in the first matrix must equal the number of rows in the second matrix");
         }
 
         let result = new SparseMatrix(null, this.numRows, other.numCols);
@@ -132,8 +132,12 @@ class SparseMatrix {
 const fs = require('fs');
 const readline = require('readline-sync');
 
-const matrix1 = new SparseMatrix("easy_sample_02_2.txt");
-const matrix2 = new SparseMatrix("easy_sample_02_2.txt");
+const matrix1 = new SparseMatrix('../sample_inputs/easy_sample_02_2.txt');
+const matrix2 = new SparseMatrix('../sample_inputs/easy_sample_02_2.txt');
+
+
+
+
 
 let operation = readline.question("Select operation: add, subtract, multiply: ");
 
